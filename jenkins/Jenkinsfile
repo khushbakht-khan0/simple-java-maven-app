@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'built-in' }
 
     stages {
         stage('Build') {
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                bat 'echo Build Complete!'
+                bat 'echo Build Successful!'
             }
         }
     }
